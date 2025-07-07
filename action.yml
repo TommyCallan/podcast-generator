@@ -1,0 +1,18 @@
+name: "Podcast Generator"
+author: "Tommy Callan"
+description: "Generates a feed for a podcats from a yaml file"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+branding:
+  icon: "git-branch"
+  color: "red"
+inputs:
+  email:
+    description: The user's email address
+    required: true
+    default: ${{ github.actor }}@localhost
+  name:
+    description: The user's email name
+    required: true
+    default: ${{ github.actor }}
